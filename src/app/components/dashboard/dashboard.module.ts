@@ -9,6 +9,6 @@ import { DashboardComponent } from './dashboard.component';
     CommonModule,
     MatCardModule
   ],
-  bootstrap: [DashboardComponent]
+  bootstrap: []
 })
 export class DashboardModule { }
