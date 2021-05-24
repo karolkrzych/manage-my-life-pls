@@ -8,7 +8,6 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NavigationComponent } from './components/layout/navigation/navigation.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DashboardModule } from './components/dashboard/dashboard.module';
 @NgModule({
   declarations: [
