@@ -1,0 +1,11 @@
+:host { 
+    width: 15%;
+    height: 100%;
+
+    .navigation-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+}
