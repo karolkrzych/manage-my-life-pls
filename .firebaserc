@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "manage-my-life-pls": {
+      "hosting": {
+        "manage-my-life-pls": [
+          "manage-my-life-pls"
+        ]
+      }
+    }
+  }
+}
