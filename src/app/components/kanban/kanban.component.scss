@@ -1,0 +1,20 @@
+:host {
+    height: 100%;
+
+    .kanban-wrapper {
+        height:100%;
+        
+        .kanban-header { 
+            display: flex;
+            justify-content: space-between;
+        
+            .kanban-header-button {
+                background-color: #B5BEC6;
+            }
+        }
+
+        .kanban-content {
+            margin-top: 10px;
+        }
+     }
+}
