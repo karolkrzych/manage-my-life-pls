@@ -1,1 +1,56 @@
-<p>kanban works!</p>
+<mat-card class="kanban-wrapper">
+    <mat-card-header class="kanban-header">
+        <button class="kanban-header-button" mat-raised-button> Dodaj wydarzenie <mat-icon>add</mat-icon> </button>
+    </mat-card-header>
+    <mat-card-content class="kanban-content">
+        
+    <div class="tasks-container">
+      <h2>To do</h2>
+        <mat-card
+        cdkDropList
+        id="todo"
+        #todoList="cdkDropList"
+        [cdkDropListData]="todo"
+        [cdkDropListConnectedTo]="[doneList, inProgressList]"
+        (cdkDropListDropped)="drop($event)"
+        class="list">
+        <p class="empty-label" *ngIf="todo.length === 0">Empty list</p>
+        <app-task (edit)="editTask('todo', $event)" *ngFor="let task of todo" cdkDrag [task]="task"></app-task>
+      </mat-card>
+    </div>
+  
+    <div class="tasks-container">
+      <h2>In progress</h2>
+  
+      <mat-card
+      cdkDropList
+      id="inProgress"
+      #inProgressList="cdkDropList"
+      [cdkDropListData]="inProgress"
+      [cdkDropListConnectedTo]="[todoList, doneList]"
+      (cdkDropListDropped)="drop($event)"
+      class="list"
+      >
+        <p class="empty-label" *ngIf="inProgress.length === 0">Empty list</p>
+        <app-task (edit)="editTask('inProgress', $event)" *ngFor="let task of inProgress" cdkDrag [task]="task"></app-task>
+      </mat-card>
+    </div>
+  
+    <div class="tasks-container">
+      <h2>Done</h2>
+  
+      <mat-card
+      cdkDropList
+      id="done"
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList, inProgressList]"
+      (cdkDropListDropped)="drop($event)"
+      class="list"
+        >
+        <p class="empty-label" *ngIf="done.length === 0">Empty list</p>
+        <app-task (edit)="editTask('done', $event)" *ngFor="let task of done" cdkDrag [task]="task"></app-task>
+      </mat-card>
+      </div>
+    </mat-card-content>
+</mat-card>
