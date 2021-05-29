@@ -13,14 +13,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { KanbanComponent } from './components/kanban/kanban.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
-import { HeaderComponent } from './components/layout/header/header.component'
+import { HeaderComponent } from './components/layout/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     KanbanComponent,
     CalendarComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

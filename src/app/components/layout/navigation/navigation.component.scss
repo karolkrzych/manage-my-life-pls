@@ -6,6 +6,20 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        background-color: #364652;
+        border-radius: 0px;
+
+        .navigation-list-item {
+            .navigation-list-item-anchor {
+                text-decoration: none;
+                color: white;
+
+                &:hover {
+                    transition: 0.2s;
+                    color: #B5BEC6;
+                }
+            }
+        }
     }
 
 }
