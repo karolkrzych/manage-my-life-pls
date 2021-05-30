@@ -33,7 +33,7 @@ import { KanbanModule } from './components/kanban/kanban.module';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    KanbanModule
+    KanbanModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
