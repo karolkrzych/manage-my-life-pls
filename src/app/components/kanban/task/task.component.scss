@@ -1,3 +1,8 @@
-.task-item {
-    background-color: #B5BEC6;
+:host {
+    display: block;
+    .task-item {
+        background-color: #b5bec646;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
 }
