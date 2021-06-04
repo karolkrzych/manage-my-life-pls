@@ -1,0 +1,17 @@
+<div class="register-dialog-wrapper">
+    <mat-card-title>Register now!</mat-card-title>
+    <form [formGroup]="user" class="register-dialog-form">
+        <div class="register-dialog-field-container">
+            <mat-form-field appearance="outline" class="register-dialog-email-field">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="register-dialog-password-field">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field>
+        </div>
+        <button class="register-dialog-button" mat-raised-button color="primary" (click)="register()">Sign up!</button>
+    </form>
+</div>
+

@@ -1,0 +1,26 @@
+:host {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .register-dialog-wrapper {
+        height: 75%;
+        width: 75%;
+    
+        .register-dialog-form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 90%;
+        
+            .register-dialog-field-container {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        
+    }
+}
+

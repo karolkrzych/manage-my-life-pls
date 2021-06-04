@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatIconModule } from '@angular/material/icon';
 import { KanbanModule } from './components/kanban/kanban.module';
+import { AuthModule } from './components/auth/auth.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { KanbanModule } from './components/kanban/kanban.module';
     MatButtonModule,
     MatIconModule,
     KanbanModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,17 @@
+<div class="login-dialog-wrapper">
+    <mat-card-title>Login</mat-card-title>
+    <form [formGroup]="user" class="login-dialog-form">
+        <div class="login-dialog-field-container">
+            <mat-form-field appearance="outline" class="login-dialog-email-field">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="login-dialog-password-field">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field>
+        </div>
+        <button class="login-dialog-button" mat-raised-button color="primary" (click)="login()">Sign up!</button>
+    </form>
+</div>
+

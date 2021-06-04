@@ -3,6 +3,20 @@
     border-radius: 0px;
     
     .header-content {
-        color: white;    
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+
+        .auth-buttons-container {
+            margin-right: 10px;
+
+            .button {
+                width: 140px;
+            }
+
+            .login-button {
+                margin-right: 10px;
+            }
+        }
     }
 }
