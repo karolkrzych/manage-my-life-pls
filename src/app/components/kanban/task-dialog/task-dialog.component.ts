@@ -19,6 +19,7 @@ export class TaskDialogComponent {
   cancel(): void {
     this.data.task.title = this.backupTask.title;
     this.data.task.description = this.backupTask.description;
+    this.data.task.tag = this.backupTask.tag;
     this.dialogRef.close(this.data);
   }
 }

@@ -1,6 +1,6 @@
-<mat-card class="task-item" *ngIf="task" (click)="edit.emit(task)">
-    <h2>{{ task.title }}</h2>
-    <p>
+<mat-card class="task-item" [ngClass]="task.tag" *ngIf="task" (click)="edit.emit(task)">
+    <h2 class="task-item-title">{{ task.title }}</h2>
+    <p class="task-item-description">
         {{ task.description }}
     </p>
 </mat-card>

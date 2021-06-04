@@ -29,7 +29,8 @@ export class KanbanComponent {
 
   editTask(list: 'done' | 'todo' | 'inProgress', task: Task): void {
     const dialogRef = this.dialog.open(TaskDialogComponent, {
-      width: '270px',
+      width: '50%',
+      height: '70%',
       data: {
         task,
         enableDelete: true
@@ -46,13 +47,15 @@ export class KanbanComponent {
 
   newTask() {
 	const dialogRef = this.dialog.open(TaskDialogComponent, {
-		width: '270px',
+		width: '50%',
+    height: '70%',
 		data: {
 			task: {}
 		}
 	})
 	dialogRef.afterClosed().subscribe((result: TaskDialogResult) => {
       if(!result.task.title && !result.task.description) return;
+      console.log(result.task)
       this.store.collection('todo').add(result.task);
     })
   }

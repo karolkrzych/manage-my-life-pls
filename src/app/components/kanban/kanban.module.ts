@@ -10,6 +10,7 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [KanbanComponent, TaskComponent, TaskDialogComponent],
   exports: [KanbanComponent],
@@ -21,7 +22,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     DragDropModule,
     MatInputModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
   ],
   bootstrap: []
 
