@@ -16,6 +16,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatIconModule } from '@angular/material/icon';
 import { KanbanModule } from './components/kanban/kanban.module';
 import { AuthModule } from './components/auth/auth.module';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { AuthModule } from './components/auth/auth.module';
     CalendarComponent,
     HeaderComponent,
     DashboardComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
