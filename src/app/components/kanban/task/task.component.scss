@@ -1,3 +1,30 @@
-.task-item {
-    background-color: #B5BEC6;
+$private: #64ff3d33;
+$work: #3dffef33;
+$other: #a83dff33;
+
+:host {
+    display: block;
+    .task-item {
+        height: 60px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        border: 1px solid #acacac;
+
+        .task-item-title {
+            margin-bottom: 5px;
+        }
+
+    }
+
+    .private {
+        background-color: $private;
+    }
+
+    .work {
+        background-color: $work;
+    }
+
+    .other {
+        background-color: $other;
+    }
 }

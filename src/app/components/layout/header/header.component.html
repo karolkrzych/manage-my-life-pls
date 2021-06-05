@@ -1,5 +1,9 @@
 <mat-card class="header-wrapper">
     <div class="header-content">
-        czasami kiedy zamykam oczy, nie widzę
+        <div class="auth-buttons-container">
+            <button *ngIf="!isLoggedIn" class="button login-button" mat-raised-button (click)="openLoginDialog()">Login</button>
+            <button *ngIf="!isLoggedIn" class="button register-button" mat-raised-button (click)="openRegisterDialog()">Register</button>
+            <button *ngIf="isLoggedIn" class="button register-button" mat-raised-button (click)="logout()">Logout</button>
+        </div>
     </div>
 </mat-card>

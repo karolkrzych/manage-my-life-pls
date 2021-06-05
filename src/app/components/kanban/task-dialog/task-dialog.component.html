@@ -1,0 +1,41 @@
+<div class="task-dialog-wrapper">
+
+  <div class="task-dialog-container">
+    <h1>Create new task</h1>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Title</mat-label>
+      <input matInput cdkFocusInitial [(ngModel)]="data.task.title" />
+    </mat-form-field>
+   
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="data.task.description"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Tag</mat-label>
+      <mat-select [(ngModel)]="data.task.tag" >
+          <mat-option value="work">Work</mat-option>
+          <mat-option value="private">Private</mat-option>
+          <mat-option value="other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions class="task-dialog-actions">
+    <button
+      *ngIf="data.enableDelete"
+      mat-fab
+      aria-label="Delete"
+      [mat-dialog-close]="{ task: data.task, delete: true }"
+      color="primary"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  
+    <button mat-button [disabled]="isFormEmpty()" [mat-dialog-close]="{ task: data.task }">OK</button>
+    <button mat-button (click)="cancel()">Cancel</button>
+  </div>
+</div>
+
