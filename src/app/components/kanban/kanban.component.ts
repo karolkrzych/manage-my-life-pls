@@ -49,12 +49,13 @@ export class KanbanComponent {
 	const dialogRef = this.dialog.open(TaskDialogComponent, {
 		width: '50%',
     height: '70%',
+    disableClose: true,
 		data: {
 			task: {}
 		}
 	})
 	dialogRef.afterClosed().subscribe((result: TaskDialogResult) => {
-      if(!result.task.title && !result.task.description) return;
+      if(!result.task.title || !result.task.description) return;
       console.log(result.task)
       this.store.collection('todo').add(result.task);
     })

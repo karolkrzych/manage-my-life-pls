@@ -24,6 +24,6 @@ export class LoginComponent {
   login() {
     this.auth
       .login(this.user.controls.email.value, this.user.controls.password.value)
-      .then(() => this.dialogRef.close());
+      .then(() => this.dialogRef.close(true));
   }
 }

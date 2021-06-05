@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { resetFakeAsyncZone } from '@angular/core/testing';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
@@ -10,7 +11,10 @@ import { RegisterComponent } from '../../auth/register/register.component';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(private dialog: MatDialog, private auth: AuthService, private router: Router) {}
+  constructor(
+    private dialog: MatDialog,
+    private auth: AuthService,
+  ) {}
 
   isLoggedIn: boolean = this.auth.isLoggedIn();
 
@@ -19,7 +23,11 @@ export class HeaderComponent {
       height: '500px',
       width: '400px',
     });
-    loginDialog.afterClosed().subscribe(() => window.location.replace('/dashboard'));
+    loginDialog.afterClosed().subscribe((res) => {
+      if (res) {
+        window.location.replace('/dashboard');
+      }
+    });
   }
 
   openRegisterDialog() {

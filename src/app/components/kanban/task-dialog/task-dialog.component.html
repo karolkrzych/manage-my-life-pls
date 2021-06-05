@@ -34,7 +34,7 @@
       <mat-icon>delete</mat-icon>
     </button>
   
-    <button mat-button [mat-dialog-close]="{ task: data.task }">OK</button>
+    <button mat-button [disabled]="isFormEmpty()" [mat-dialog-close]="{ task: data.task }">OK</button>
     <button mat-button (click)="cancel()">Cancel</button>
   </div>
 </div>

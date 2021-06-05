@@ -22,4 +22,11 @@ export class TaskDialogComponent {
     this.data.task.tag = this.backupTask.tag;
     this.dialogRef.close(this.data);
   }
+  
+  isFormEmpty(): boolean {
+    if( !this.data.task.title || !this.data.task.description || !this.data.task.tag ) {
+      return true
+    }
+    return false
+  }
 }
